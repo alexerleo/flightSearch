@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flight search</title>
+	<link rel="stylesheet" href="stylesheets/bootstrap.css">
+	<link rel="stylesheet" href="stylesheets/jquery-ui.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<script src="lib/jquery-3.1.1.min.js"></script>
+	<script src="lib/jquery-ui.js"></script>
+	<script src="javascripts/service.js"></script>
+	<script src="javascripts/index.js"></script>
+</head>
+<body>
+	<h1>Flight search</h1>
+	<div class="alert alert-danger hide" role="alert" id='error'>Please fill in all fields</div>
+	<h3 class="alert alert-warning hide" role="alert" id='noResults'>Sorry, at your request nothing found</h3>
+	<div class="alert alert-info hide" role="alert">Loading...</div>
+
+	<div id="form">
+		<form class="form-inline" id="searchForm">
+			<div class="form-group">
+				<label for="fromLocation">From location</label>
+				<input type="text" class="form-control" id="fromLocation" placeholder="Airport name">
+			</div>
+			<div class="form-group">
+				<label for="toLocation">To location</label>
+				<input type="text" class="form-control" id="toLocation" placeholder="Airport name">
+			</div>
+			<div class="form-group">
+				<label for="datepicker">Travel date</label>
+				<input type="text" id="datepicker" class="form-control" placeholder="Date">
+			</div>
+			<button type="submit" class="btn btn-default">Search</button>
+		</form>
+	</div>
+	<div id="content">
+		<ul class="nav nav-tabs hide" id='tabs'></ul>
+		<div id="content-tab" class="hide">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Airline</th>
+						<th>Departure time</th>
+						<th>Duration</th>
+						<th>Time of arrival</th>
+						<th>Airports</th>
+						<th>Price</th>
+						<th>Plane</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
